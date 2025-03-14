@@ -1,0 +1,3 @@
+[submodule "path_to_submodule"] 
+  path = nautobot-docker-compose
+  url = git@github.com:nautobot/nautobot-docker-compose.git
