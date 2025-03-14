@@ -8,3 +8,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11.4' # Define your project python version
+      - id: run-tests
+        uses: dima-engineer/pytest-reporter@v3
+        with:
+          cov-omit-list: tests/*
+          cov-threshold-single: 85
+          cov-threshold-total: 90
+          async-tests: true
+          poetry-version: 1.4.2
