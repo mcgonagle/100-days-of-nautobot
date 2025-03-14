@@ -8,6 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@main
+          with:
+            python-version: "3.12"
       - uses: dariocurr/pytest-summary@main
         with:
           paths: Day003_Hello_Jobs_Part_1/**.py
